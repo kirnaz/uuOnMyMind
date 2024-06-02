@@ -14,7 +14,7 @@ class NoticeController {
     }
   }
 
-  async filter(req, res) {
+  async getAll(req, res) {
     const { typeId } = req.query;
     let notes;
     if (!typeId) {
@@ -26,6 +26,10 @@ class NoticeController {
     return res.json(notes);
   }
 
+  async filter(req, res) {
+    
+  }
+
   async getOne(req, res) {
     const { id } = req.params;
     const notice = await Notice.findOne({
@@ -34,7 +38,9 @@ class NoticeController {
     return res.json(notice);
   }
 
-  async edit(req, res) {}
+  async edit(req, res) {
+
+  }
 
   async delete(req, res) {
     return {};

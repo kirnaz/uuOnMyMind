@@ -6,6 +6,6 @@ const userRouter = require('./userRouter')
 
 router.use('/user', userRouter)
 router.use('/type', typeRouter)
-router.use('/notice', noticeRouter)
+router.use('/notes', noticeRouter)
 
 module.exports = router;
